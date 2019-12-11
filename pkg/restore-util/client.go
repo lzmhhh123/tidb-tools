@@ -39,7 +39,7 @@ type Client interface {
 	// ScanRegion gets a list of regions, starts from the region that contains key.
 	// Limit limits the maximum number of regions returned.
 	ScanRegions(ctx context.Context, key, endKey []byte, limit int) ([]*RegionInfo, error)
-	// SetPlacementRule insert or update a placement rule to PD.
+	// SetPlacementRule inserts or updates a placement rule to PD.
 	SetPlacementRule(ctx context.Context, rule Rule) error
 	// DeletePlacementRule removes a placement rule from PD.
 	DeletePlacementRule(ctx context.Context, groupID, ruleID string) error
