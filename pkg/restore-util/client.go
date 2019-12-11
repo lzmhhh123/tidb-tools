@@ -43,7 +43,7 @@ type Client interface {
 	SetPlacementRule(ctx context.Context, rule Rule) error
 	// DeletePlacementRule removes a placement rule from PD.
 	DeletePlacementRule(ctx context.Context, groupID, ruleID string) error
-	// SetStoreLabel add or update specified label of stores. If labelValue
+	// SetStoreLabel adds or updates specified label of stores. If labelValue
 	// is empty, it clears the label.
 	SetStoresLabel(ctx context.Context, stores []uint64, labelKey, labelValue string) error
 }
